@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список сотрудников</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Найдены пользователи</h1>
+    </header>
+
+    <section class="employee-list">
+        <!-- Сотрудник 1 -->
+        <div class="employee-card" data-id="1">
+            <img src="images/employee1.jpg" alt="Иван Иванов">
+            <h2>Иван Иванов</h2>
+            <p class="position">Генеральный директор</p>
+            <p class="description">Опытный руководитель с 10-летним стажем. Любит кофе и утренние пробежки.</p>
+        </div>
+
+        <!-- Сотрудник 2 -->
+        <div class="employee-card" data-id="2">
+            <img src="images/employee2.jpg" alt="Мария Петрова">
+            <h2>Мария Петрова</h2>
+            <p class="position">Менеджер проектов</p>
+            <p class="description">Организатор с отличными навыками коммуникации. Обожает путешествовать.</p>
+        </div>
+
+        <!-- Сотрудник 3 -->
+        <div class="employee-card" data-id="3">
+            <img src="images/employee3.jpg" alt="Алексей Сидоров">
+            <h2>Алексей Сидоров</h2>
+            <p class="position">Разработчик</p>
+            <p class="description">Программист с опытом в веб-разработке. Увлекается робототехникой.</p>
+        </div>
+
+        <!-- Сотрудник 4 -->
+        <div class="employee-card" data-id="4">
+            <img src="images/employee4.jpg" alt="Елена Кузнецова">
+            <h2>Елена Кузнецова</h2>
+            <p class="position">Дизайнер</p>
+            <p class="description">Творческий человек с уникальным чувством стиля. Любит рисовать и фотографировать.</p>
+        </div>
+
+        <!-- Сотрудник 5 -->
+        <div class="employee-card" data-id="5">
+            <img src="images/employee5.jpg" alt="Дмитрий Смирнов">
+            <h2>Дмитрий Смирнов</h2>
+            <p class="position">Аналитик</p>
+            <p class="description">Эксперт в области анализа данных. Увлекается шахматами и научной фантастикой.</p>
+        </div>
+
+        <!-- Сотрудник 6 -->
+        <div class="employee-card" data-id="6">
+            <img src="images/employee6.jpg" alt="Ольга Васнецова">
+            <h2>Ольга Васнецова</h2>
+            <p class="position">Маркетолог</p>
+            <p class="description">Специалист по продвижению брендов. Обожает книги и театр.</p>
+        </div>
+    </section>
+
+    <!-- Модальное окно -->
+    <div id="employee-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <h2 id="modal-name"></h2>
+            <p id="modal-position" class="position"></p>
+            <p id="modal-description" class="description"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Наша компания. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
