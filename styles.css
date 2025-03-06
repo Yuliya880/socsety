@@ -111,7 +111,6 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
-
 /* Модальное окно */
 .modal {
     display: none;
@@ -124,6 +123,7 @@ footer p {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow-y: auto; /* Добавляем прокрутку, если контент не помещается */
 }
 
 .modal-content {
@@ -138,6 +138,9 @@ footer p {
     text-align: center;
     position: relative;
     animation: fadeIn 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выравниваем содержимое по центру */
 }
 
 .modal-content img {
@@ -179,7 +182,7 @@ footer p {
     color: #ff6b6b;
 }
 
-/* Анимации */
+/* Анимация появления */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -189,50 +192,12 @@ footer p {
     }
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Адаптивность */
+/* Адаптивность для модального окна */
 @media (max-width: 768px) {
-    .employee-card {
-        width: 100%;
-        max-width: 300px;
-    }
-
     .modal-content {
-        width: 95%; /* Шире на мобильных устройствах */
-        max-width: 95%;
-        padding: 15px;
+        width: 85%; /* Шире на мобильных устройствах */
+        max-width: 85%;
+        padding: 5px;
     }
 
     .modal-content img {
