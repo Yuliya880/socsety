@@ -112,6 +112,73 @@ footer p {
     font-size: 0.9em;
 }
 
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px; /* Максимальная ширина для больших экранов */
+    height: auto;
+    max-height: 90vh; /* Максимальная высота */
+    overflow-y: auto; /* Добавляем прокрутку, если контент не помещается */
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+.modal-content .position {
+    font-size: 1.2em;
+    color: #ff6b6b;
+    margin: 5px 0;
+}
+
+.modal-content .description {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ff6b6b;
+}
+
 /* Анимации */
 @keyframes fadeIn {
     from {
@@ -161,77 +228,55 @@ footer p {
         width: 100%;
         max-width: 300px;
     }
-}
-/* Модальное окно */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
 
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    position: relative;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.modal-content img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.modal-content h2 {
-    margin: 0;
-    font-size: 2em;
-    color: #2c3e50;
-}
-
-.modal-content .position {
-    font-size: 1.2em;
-    color: #ff6b6b;
-    margin: 5px 0;
-}
-
-.modal-content .description {
-    font-size: 1em;
-    color: #666;
-    margin: 10px 0;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.close:hover {
-    color: #ff6b6b;
-}
-
-/* Анимация появления */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+    .modal-content {
+        width: 95%; /* Шире на мобильных устройствах */
+        max-width: 95%;
+        padding: 15px;
     }
-    to {
-        opacity: 1;
+
+    .modal-content img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.8em;
+    }
+
+    .modal-content .position {
+        font-size: 1.1em;
+    }
+
+    .modal-content .description {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%; /* На всю ширину экрана */
+        max-width: 100%;
+        height: 100vh; /* На всю высоту экрана */
+        max-height: 100vh;
+        border-radius: 0; /* Убираем скругление углов */
+        padding: 10px;
+    }
+
+    .modal-content img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5em;
+    }
+
+    .modal-content .position {
+        font-size: 1em;
+    }
+
+    .modal-content .description {
+        font-size: 0.8em;
     }
 }
